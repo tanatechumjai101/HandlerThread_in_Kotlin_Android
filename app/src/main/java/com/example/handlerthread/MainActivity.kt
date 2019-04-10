@@ -41,4 +41,8 @@ class MainActivity : AppCompatActivity() {
         thread.start()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        thread.interrupt()
+    }
 }
